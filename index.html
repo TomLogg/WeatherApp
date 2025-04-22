@@ -33,5 +33,21 @@
         </div>
       </div>
     </div>
+    <script>
+      // api url and key from open weather map api
+      const apiKey = "0acb236d73eb3cf29cab2208322e2ce4";
+      const apiUrl =
+        "https://api.openweathermap.org/data/2.5/weather?q=germany&appid=0acb236d73eb3cf29cab2208322e2ce4&units=metric&q=bangalore";
+
+      //function to fetch weather data from url and display to console.
+      async function checkWeather() {
+        const response = await fetch(apiUrl + `&appid=${apiKey}`);
+        var data = await response.json();
+
+        console.log(data);
+      }
+
+      checkWeather();
+    </script>
   </body>
 </html>
